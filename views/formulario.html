@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Reservaciones</h1>
+
+        <form id="reservation-form">
+            <input type="text" id="name" placeholder="Nombre del Cliente" required>
+            <input type="tel" id="contact" placeholder="Número de Contacto" required>
+            <input type="number" id="people" placeholder="Cantidad de Personas" required min="1">
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <button type="submit">Reservar</button>
+        </form>
+
+        <h2>Reservaciones Actuales</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Contacto</th>
+                    <th>Personas</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="reservations-list">
+                <!-- Reservaciones agregadas aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
